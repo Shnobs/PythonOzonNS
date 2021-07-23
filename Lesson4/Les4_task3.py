@@ -3,13 +3,16 @@ shows = {'Секретные материалы': 'фантастика', 'Ве�
 'Карточный домик': 'драма', 'Рик и Морти': 'фантастика'}
 ratings = {'Секретные материалы': 0.9, 'Ведьмак': 0.95, 'Клан Сопрано': 0.8, '24': 0.75, 'Черное зеркало': 0.98,
            'Во все тяжкие': 0.85, 'Игра престолов': 0.87, 'Карточный домик': 0.82, 'Рик и Морти': 1}
-spisok_genre = list(shows.values())
-spisok_rating = list(ratings.values())
+spisok = []
 average_rating = 0
-kolichestvo = 0
-# for elem in spisok_genre:
-#     if elem == 'фантастика':
-#         average_rating += int(spisok_rating(spisok_genre.index(elem)))
-print(spisok_genre)
-print(spisok_rating)
-print(spisok_genre.index('фантастика'))
+i = 0
+for key, value in shows.items():
+    if value == 'фантастика':
+        spisok.append(key)
+for key, value in ratings.items():
+    if key in spisok:
+        average_rating += value
+        i += 1
+average_rating = average_rating / i
+print(f'Средний рейтинг сериалов в жанре фантастика составляет {average_rating}')
+
