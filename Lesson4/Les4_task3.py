@@ -7,11 +7,11 @@ spisok = []
 average_rating = 0
 i = 0
 for key, value in shows.items():
-    if value == 'фантастика':
+    if value == 'фантастика':  # Запоняем список по значению
         spisok.append(key)
-for key, value in ratings.items():
+for key, value in ratings.items():  # Проверяем список по ключам
     if key in spisok:
         average_rating += value
         i += 1
-average_rating = average_rating / i
+average_rating = average_rating / i  # Расчитываем средний рейтинг
 print(f'Средний рейтинг сериалов в жанре фантастика составляет {average_rating}')
