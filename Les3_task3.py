@@ -18,4 +18,4 @@ while active:
         active = False
 for elem in range(len(final_speech)):
     print(final_speech[elem]) # Выводим готовые речи
-    elem += 1
+ 
