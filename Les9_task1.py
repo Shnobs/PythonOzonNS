@@ -4,7 +4,6 @@ i = 0
 with open('lesson09_closest_galaxies.csv', 'r', encoding="utf-8") as file:  # Открываем файл, без кодировки не работает
     for row in file.read().splitlines():  # Проходим файл по строкам
         galaxy.append(row.split(',')) # Разбиваем строки по разделютелю в виде запятой, заполняем список
-        print(galaxy)
 for i in range(len(galaxy)):  # Проходим список по индексам
     if re.search(r'Рыбы|Пегас|Кит', galaxy[i][0]):  # Проверяем 1 колонку каждой строки на совпадение
          print(f'Галактика по заданным условиям - {galaxy[i][0]}')  # Выводим полное название галактики
